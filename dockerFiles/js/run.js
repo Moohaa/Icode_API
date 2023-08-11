@@ -7,7 +7,13 @@ if(lang!="js"){
     console.log("can't execute js code");
 }
 else{
-    eval(script);
-    console.log("finish");
+    try{
+       eval(script);
+       console.log("finish");
+    }
+    catch(e){
+        console.log(e);
+        console.log("error");
+    }
 }
 
